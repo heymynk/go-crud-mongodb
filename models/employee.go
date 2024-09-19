@@ -4,7 +4,6 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
-// Employee Model
 type Employee struct {
 	ID           primitive.ObjectID `json:"id,omitempty" bson:"_id,omitempty"`
 	FirstName    string             `json:"first_name" bson:"first_name"`

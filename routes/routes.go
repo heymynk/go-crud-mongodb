@@ -10,13 +10,11 @@ import (
 func RegisterEmployeeRoutes(router *mux.Router) {
 	log.Println("Registering employee routes")
 
-	// Employee Routes
 	router.HandleFunc("/employees", controllers.AddEmployee).Methods("POST")
 	router.HandleFunc("/employees", controllers.GetEmployees).Methods("GET")
 	router.HandleFunc("/employees/{id}", controllers.UpdateEmployee).Methods("PUT")
 	router.HandleFunc("/employees/{id}", controllers.DeleteEmployee).Methods("DELETE")
 
-	// Department Routes
 	router.HandleFunc("/departments", controllers.AddDepartment).Methods("POST")
 	router.HandleFunc("/departments", controllers.GetDepartments).Methods("GET")
 	router.HandleFunc("/departments/{id}", controllers.GetDepartmentByID).Methods("GET")
